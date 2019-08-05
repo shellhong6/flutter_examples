@@ -1,16 +1,9 @@
-# flutter_examples
+>Some example that help to learn Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* 沉浸式状态栏例子(immersion statusBar demo)
+* 圆角例子(circular bead demo)
+* 下拉刷新和滚动加载例子(pull to refresh and scroll to load data)
+* 强制把输入字母转换为小写例子(forces the entered text to be lower case)
+* 伸缩头部与多种滚动容器复合(flexible header & wrap multiple scroll sliver)
+* 图片轮播之swiper实现(image carousel by swiper)
+* 图片轮播之transformer_page_view实现(image carousel by transformer_page_view)
