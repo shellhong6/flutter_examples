@@ -6,6 +6,8 @@ import 'package:flutter_examples/example/input_demo.dart';
 import 'package:flutter_examples/example/custom_scroll_demo.dart';
 import 'package:flutter_examples/example/swiper_demo.dart';
 import 'package:flutter_examples/example/transformer_page_view_demo.dart';
+import 'package:flutter_examples/example/json_seri/json_serializable_demo.dart';
+import 'package:flutter_examples/example/stretchable_text_view_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -73,6 +75,8 @@ const routerName = [
   "伸缩头部与多种滚动容器复合(flexible header & wrap multiple scroll sliver)",
   "图片轮播之swiper实现(image carousel by swiper)",
   "图片轮播之transformer_page_view实现(image carousel by transformer_page_view)",
+  "json格式请求结果反序列化与使用(dio & json_serializable demo)",
+  "可伸缩文本组件例子(stretchable and shrinkable text view)",
 ];
 
 Map<String, WidgetBuilder> routers = {
@@ -96,5 +100,11 @@ Map<String, WidgetBuilder> routers = {
   },
   "widget/TransformerPageViewDemoPage": (context) {
     return new TransformerPageViewDemoPage();
+  },
+  "widget/JSONSerializableDemo": (context) {
+    return new JSONSerializableDemo();
+  },
+  "widget/StretchableTextViewDemo": (context) {
+    return new StretchableTextViewDemo();
   },
 };
