@@ -11,3 +11,6 @@
 * 可伸缩文本组件例子(stretchable and shrinkable text view)
 
 ## Show some :heart: and star the repo to support the project
+
+* a library for stretchable and shrinkable text view., view: [flutter_stretchable_text_view](https://github.com/shellhong6/flutter_stretchable_text_view)
+* getting example about flutter app, view: [books_app](https://github.com/shellhong6/books_app)
