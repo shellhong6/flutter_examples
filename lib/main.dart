@@ -8,6 +8,7 @@ import 'package:flutter_examples/example/swiper_demo.dart';
 import 'package:flutter_examples/example/transformer_page_view_demo.dart';
 import 'package:flutter_examples/example/json_seri/json_serializable_demo.dart';
 import 'package:flutter_examples/example/stretchable_text_view_demo.dart';
+import 'package:flutter_examples/example/custom_sliver_header/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -77,6 +78,7 @@ const routerName = [
   "图片轮播之transformer_page_view实现(image carousel by transformer_page_view)",
   "json格式请求结果反序列化与使用(dio & json_serializable demo)",
   "可伸缩文本组件例子(stretchable and shrinkable text view)",
+  "CustomScrollView中SliverPersistentHeader的应用",
 ];
 
 Map<String, WidgetBuilder> routers = {
@@ -106,5 +108,8 @@ Map<String, WidgetBuilder> routers = {
   },
   "widget/StretchableTextViewDemo": (context) {
     return new StretchableTextViewDemo();
+  },
+  "widget/CustomSSliverHeaderDemo": (context) {
+    return new CustomSSliverHeaderDemo();
   },
 };

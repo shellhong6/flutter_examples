@@ -9,6 +9,7 @@
 * 图片轮播之transformer_page_view实现(image carousel by transformer_page_view)
 * json格式请求结果反序列化与使用(dio & json_serializable demo)
 * 可伸缩文本组件例子(stretchable and shrinkable text view)
+* CustomScrollView中SliverPersistentHeader的应用
 
 ## Show some :heart: and star the repo to support the project
 
