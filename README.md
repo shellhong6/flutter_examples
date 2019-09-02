@@ -10,6 +10,9 @@
 * json格式请求结果反序列化与使用(dio & json_serializable demo)
 * 可伸缩文本组件例子(stretchable and shrinkable text view)
 * CustomScrollView中SliverPersistentHeader的应用
+* 交织动画（tween animation）
+* hero animation
+* AnimatedSwitcher
 
 ## Show some :heart: and star the repo to support the project
 

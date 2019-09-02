@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_examples/example/immersion_status_bar_demo.dart';
 import 'package:flutter_examples/example/clip_r_rect_demo.dart';
 import 'package:flutter_examples/example/scroll_and_refresh_demo.dart';
@@ -9,6 +10,9 @@ import 'package:flutter_examples/example/transformer_page_view_demo.dart';
 import 'package:flutter_examples/example/json_seri/json_serializable_demo.dart';
 import 'package:flutter_examples/example/stretchable_text_view_demo.dart';
 import 'package:flutter_examples/example/custom_sliver_header/index.dart';
+import 'package:flutter_examples/example/animation/tween_demo.dart';
+import 'package:flutter_examples/example/animation/hero_demo.dart';
+import 'package:flutter_examples/example/animation/switcher_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -39,7 +43,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    var routeLists = routers.keys.toList();
+    // var routeLists = routers.keys.toList();
+    var routeLists = routers.values.toList();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -49,7 +54,11 @@ class _HomePageState extends State<HomePage> {
           itemBuilder: (context, index) {
             return new InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed(routeLists[index]);
+                // Navigator.of(context).pushNamed(routeLists[index]);
+                // goto(routeLists[index](context));
+                Navigator.push(context, CupertinoPageRoute(  
+                  builder: routeLists[index],
+                ));
               },
               child: new Card(
                 child: new Container(
@@ -66,7 +75,26 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  void goto (Widget page) {
+    Navigator.push(
+      this.context,
+      PageRouteBuilder(
+        transitionDuration: Duration(milliseconds: 500), //动画时间为500毫秒
+        pageBuilder: (BuildContext context, Animation animation,
+            Animation secondaryAnimation) {
+          return new FadeTransition(
+            //使用渐隐渐入过渡,
+            opacity: animation,
+            child: page, //路由B
+          );
+        },
+      ),
+    );
+  }
 }
+
+
 
 const routerName = [
   "沉浸式状态栏例子(immersion statusBar demo)",
@@ -79,6 +107,9 @@ const routerName = [
   "json格式请求结果反序列化与使用(dio & json_serializable demo)",
   "可伸缩文本组件例子(stretchable and shrinkable text view)",
   "CustomScrollView中SliverPersistentHeader的应用",
+  "交织动画（tween animation）",
+  "hero animation",
+  "AnimatedSwitcher"
 ];
 
 Map<String, WidgetBuilder> routers = {
@@ -111,5 +142,14 @@ Map<String, WidgetBuilder> routers = {
   },
   "widget/CustomSSliverHeaderDemo": (context) {
     return new CustomSSliverHeaderDemo();
+  },
+  "widget/TweenDemo": (context) {
+    return new TweenDemo();
+  },
+  "widget/HeroAnimationRoute": (context) {
+    return new HeroAnimationRoute();
+  },
+  "widget/AnimatedSwitcherCounterRoute": (context) {
+    return new AnimatedSwitcherCounterRoute();
   },
 };
